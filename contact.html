@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Berserk Fansite</title>
+    <link rel="stylesheet" href="Assets/css/fansite2.css">
+</head>
+<body>
+    <!-- Header avec navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>BERSERK</h1>
+                <p class="tagline">La légende de l'Épéiste Noir</p>
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Accueil Principal</a>
+                <a href="fansite2.html" class="nav-link">Accueil</a>
+                <a href="actualite.html" class="nav-link">Actualités</a>
+                <a href="realisations.html" class="nav-link">Réalisations</a>
+                <a href="evenements.html" class="nav-link">Événements</a>
+                <a href="galerie.html" class="nav-link">Galerie</a>
+                <a href="liens.html" class="nav-link">Liens</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Section Hero -->
+        <section class="hero-section">
+            <h1 class="hero-title">Contact</h1>
+        </section>
+
+        <!-- Section Introduction -->
+        <section class="section">
+            <div class="description-container text-center">
+                <h2 class="mb-md">Contactez-nous</h2>
+                <p class="intro-text">
+                    Vous avez une question, une suggestion ou souhaitez partager votre passion pour Berserk ? 
+                    N'hésitez pas à nous contacter via le formulaire ci-dessous. Nous répondons généralement 
+                    sous 48 heures.
+                </p>
+            </div>
+        </section>
+
+        <!-- Formulaire de Contact -->
+        <section class="section">
+            <div class="description-container" style="max-width: 700px; margin: 0 auto;">
+                <form action="#" method="post" id="contactForm">
+                    <!-- Nom -->
+                    <div class="form-group">
+                        <label for="nom" class="form-label">Nom complet *</label>
+                        <input 
+                            type="text" 
+                            id="nom" 
+                            name="nom" 
+                            class="form-control" 
+                            placeholder="Entrez votre nom"
+                            required
+                            minlength="2"
+                            maxlength="100"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Adresse email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-control" 
+                            placeholder="votre.email@exemple.com"
+                            required
+                        >
+                    </div>
+
+                    <!-- Sujet -->
+                    <div class="form-group">
+                        <label for="sujet" class="form-label">Sujet *</label>
+                        <select 
+                            id="sujet" 
+                            name="sujet" 
+                            class="form-control"
+                            required
+                        >
+                            <option value="">-- Sélectionnez un sujet --</option>
+                            <option value="question">Question générale</option>
+                            <option value="suggestion">Suggestion d'amélioration</option>
+                            <option value="erreur">Signaler une erreur</option>
+                            <option value="contribution">Proposer une contribution</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">Votre message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-control" 
+                            rows="8"
+                            placeholder="Écrivez votre message ici..."
+                            required
+                            minlength="10"
+                            maxlength="1000"
+                        ></textarea>
+                        <small style="color: var(--argent); display: block; margin-top: var(--spacing-xs);">
+                            Minimum 10 caractères, maximum 1000 caractères
+                        </small>
+                    </div>
+
+                    <!-- Newsletter (optionnel) -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: var(--spacing-xs); cursor: pointer;">
+                            <input 
+                                type="checkbox" 
+                                id="newsletter" 
+                                name="newsletter"
+                                style="width: auto; cursor: pointer;"
+                            >
+                            <span>Je souhaite recevoir la newsletter Berserk (actualités, sorties, événements)</span>
+                        </label>
+                    </div>
+
+                    <!-- Bouton d'envoi -->
+                    <div class="form-group text-center mt-lg">
+                        <button type="submit" class="btn btn-primary" style="padding: var(--spacing-md) var(--spacing-xl);">
+                            ✉️ Envoyer le message
+                        </button>
+                    </div>
+
+                    <!-- Mention légale -->
+                    <p class="text-center mt-md" style="font-size: var(--font-small); color: var(--argent);">
+                        * Champs obligatoires. Vos données personnelles ne seront jamais partagées avec des tiers.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Autres moyens de contact -->
+        <section class="section">
+            <h2 class="text-center mb-lg">Autres moyens de nous contacter</h2>
+            
+            <div class="grid grid-3">
+                <!-- Réseaux sociaux -->
+                <article class="card text-center">
+                    <h3>📱 Réseaux Sociaux</h3>
+                    <p class="mb-md">
+                        Suivez-nous et interagissez avec nous sur nos réseaux sociaux.
+                    </p>
+                    <ul class="list-styled">
+                        <li class="list-item">
+                            <a href="https://twitter.com/berserk_fansite" target="_blank" rel="noopener" style="color: var(--rouge-sang);">
+                                Twitter/X @berserk_fansite
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://instagram.com/berserk_fansite" target="_blank" rel="noopener" style="color: var(--rouge-sang);">
+                                Instagram @berserk_fansite
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://facebook.com/berserkfansite" target="_blank" rel="noopener" style="color: var(--rouge-sang);">
+                                Facebook /berserkfansite
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Discord -->
+                <article class="card text-center">
+                    <h3>💬 Discord</h3>
+                    <p class="mb-md">
+                        Rejoignez notre serveur Discord pour discuter en direct avec d'autres fans.
+                    </p>
+                    <a href="https://discord.gg/berserk-fansite" class="btn btn-primary mt-md" target="_blank" rel="noopener">
+                        Rejoindre le Discord
+                    </a>
+                    <p class="mt-md text-secondary">
+                        <small>Communauté active 24/7 avec plus de 2000 membres</small>
+                    </p>
+                </article>
+
+                <!-- Email direct -->
+                <article class="card text-center">
+                    <h3>📧 Email Direct</h3>
+                    <p class="mb-md">
+                        Vous préférez nous contacter directement par email ?
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--rouge-sang); font-weight: 500;">
+                        contact@berserk-fansite.fr
+                    </p>
+                    <p class="mt-md text-secondary">
+                        <small>Réponse sous 48h ouvrées</small>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <h2 class="text-center mb-lg">❓ Questions Fréquentes</h2>
+            
+            <div class="grid grid-2">
+                <article class="card">
+                    <h3>Le site est-il officiel ?</h3>
+                    <p>
+                        Non, ce site est un fansite créé par des passionnés de Berserk. Nous ne sommes 
+                        pas affiliés à Hakusensha, Young Animal, ou aux éditeurs officiels. C'est un 
+                        projet à but non lucratif en hommage à Kentaro Miura.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Puis-je contribuer au site ?</h3>
+                    <p>
+                        Oui ! Nous acceptons les contributions (articles, traductions, fan arts avec autorisation). 
+                        Contactez-nous via le formulaire en sélectionnant "Proposer une contribution".
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Comment signaler une erreur ?</h3>
+                    <p>
+                        Utilisez le formulaire ci-dessus en sélectionnant "Signaler une erreur" et décrivez 
+                        précisément le problème (page concernée, nature de l'erreur). Nous corrigerons rapidement.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Vendez-vous des produits Berserk ?</h3>
+                    <p>
+                        Non, nous ne vendons rien. Consultez notre page <a href="liens.html" style="color: var(--rouge-sang);">Liens</a> 
+                        pour trouver les boutiques officielles et revendeurs autorisés de produits Berserk.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Puis-je utiliser vos contenus ?</h3>
+                    <p>
+                        Les textes originaux du site peuvent être partagés avec attribution. Les images 
+                        appartiennent à leurs auteurs respectifs. Contactez-nous pour toute demande spécifique.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Y a-t-il des spoilers sur le site ?</h3>
+                    <p>
+                        Oui, le site contient des spoilers sur l'ensemble de la série. Nous essayons 
+                        d'avertir quand c'est pertinent, mais naviguez avec prudence si vous n'êtes pas à jour.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Informations légales -->
+        <section class="section">
+            <div class="description-container text-center">
+                <h2 class="mb-md">⚖️ Informations Légales</h2>
+                <p>
+                    Ce site est un projet de fans à but non lucratif créé par des passionnés de Berserk. 
+                    Berserk © Kentaro Miura (Studio Gaga) / Hakusensha. Tous droits réservés.
+                </p>
+                <p class="mt-sm">
+                    Les images, illustrations et contenus du manga appartiennent à leurs auteurs et éditeurs respectifs. 
+                    Utilisées ici dans un cadre de promotion et d'hommage. Aucune violation de copyright n'est intentionnelle.
+                </p>
+                <p class="mt-sm text-secondary">
+                    <small>Dernière mise à jour : Novembre 2025</small>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="fansite2.html" class="footer-link">Accueil</a>
+                <a href="actualite.html" class="footer-link">Actualités</a>
+                <a href="realisations.html" class="footer-link">Réalisations</a>
+                <a href="evenements.html" class="footer-link">Événements</a>
+                <a href="galerie.html" class="footer-link">Galerie</a>
+                <a href="liens.html" class="footer-link">Liens</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+            <p class="footer-text">© 2025 Berserk Fansite - Hommage à Kentaro Miura (1966-2021)</p>
+        </div>
+    </footer>
+</body>
+</html>
