@@ -588,5 +588,17 @@ html {
     }
 }
 
+@media (max-width: 900px) {
+    .decouverte_subtitle_presentation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+    }
+}
+
+
 
 
