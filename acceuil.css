@@ -99,7 +99,6 @@ main {
     padding-bottom: 40px;
 }
 
-
 .hero::after {
     content: "";
     position: absolute;
@@ -134,7 +133,7 @@ main {
     border-bottom: #fff 1px solid;
 }
 
-/* LAYOUT CENTRAL (IMAGE PRINCIPALE + GRILLE PERSOS) */
+
 .content {
     display: flex;
     gap: 28px;
@@ -235,14 +234,41 @@ main {
     padding-left: 12px;
 }
 
-.actus_content {
+/* Wrapper = image + cards cote à cote */
+.actus_wrapper {
     display: flex;
-    gap: 20px;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* Grande image à gauche */
+.actus_image {
+    flex: 0 0 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1a1a24;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+}
+
+.actus_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cards à droite */
+.actus_cards {
+    flex: 1;
+    display: flex;
+    gap: 24px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .actus_card {
-    width: 180px;
+    flex: 1 1 230px;
+    max-width: 280px;
     background: #1a1a24;
     border-radius: 12px;
     overflow: hidden;
@@ -252,19 +278,19 @@ main {
 
 .actus_card img {
     width: 100%;
-    height: 140px;
+    height: 170px;
     object-fit: cover;
     border-bottom: 1px solid #fff;
 }
 
 .actus_card h3 {
-    margin: 8px 10px 2px;
-    font-size: 16px;
+    margin: 10px 12px 4px;
+    font-size: 17px;
     text-transform: uppercase;
 }
 
 .actus_card p {
-    margin: 0 10px 12px;
+    margin: 0 12px 14px;
     font-size: 13px;
     color: #ccc;
 }
@@ -286,6 +312,7 @@ main {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .decouverte_card {
@@ -372,6 +399,10 @@ footer {
     border-bottom-color: #ff4b3a;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .header_acceuil {
@@ -433,9 +464,23 @@ footer {
         align-items: flex-start;
     }
 
-    /* on retire l'image de fond sur mobile/tablette */
+    
     .hero::after {
         display: none;
+    }
+
+    .actus_wrapper {
+        flex-direction: column;
+    }
+
+    .actus_image {
+        flex: none;
+        max-width: 100%;
+        height: 260px;
+    }
+
+    .actus_image img {
+        height: 100%;
     }
 }
 
@@ -464,8 +509,7 @@ footer {
         width: 100%;
     }
 
-    .actus_content,
-    .decouverte_content {
+    .actus_cards {
         justify-content: center;
     }
 
