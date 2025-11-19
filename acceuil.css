@@ -21,7 +21,7 @@ body {
     border-bottom: 1px solid #2a2a35;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 .header_acceuil ul,
@@ -46,13 +46,6 @@ body {
     height: 52px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-.logo span {
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 700;
 }
 
 .nav_link ul {
@@ -93,25 +86,46 @@ body {
     border-color: #ff4b3a;
 }
 
-/* MAIN */
+/* MAIN GLOBAL */
 main {
     max-width: 1100px;
     margin: 32px auto 60px;
     padding: 0 16px;
-    position: relative;
 }
 
+/* HERO = TEXT + CONTENT AVEC BG À DROITE */
+.hero {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("image-acceuil/background_acceuil.jpg");
+    background-size: cover;
+    background-position: center right;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* SECTION TEXTE */
 .text h1 {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-left: 4px solid #ff4b3a;
     padding-left: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .text .description {
-    background: #14141d;
+    background: rgba(20, 20, 29, 0.9);
     padding: 18px 20px;
     border-radius: 12px;
     line-height: 1.6;
@@ -120,7 +134,7 @@ main {
     border-bottom: #fff 1px solid;
 }
 
-/* LAYOUT CENTRAL */
+/* LAYOUT CENTRAL (IMAGE PRINCIPALE + GRILLE PERSOS) */
 .content {
     display: flex;
     gap: 28px;
@@ -132,7 +146,7 @@ main {
 .main_img {
     width: 300px;
     flex-shrink: 0;
-    background: #1a1a24;
+    background: rgba(26, 26, 36, 0.95);
     border-radius: 18px;
     overflow: hidden;
     border-bottom: #fff 1px solid;
@@ -149,12 +163,13 @@ main {
     font-size: 22px;
     letter-spacing: 2px;
     border-bottom: #fff 1px solid;
+    text-transform: uppercase;
 }
 
 .main_img p {
     padding: 14px 18px 18px;
     font-size: 14px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* COLONNE À DROITE */
@@ -175,7 +190,7 @@ main {
 .secondflex > div {
     width: 180px;
     border-radius: 14px;
-    background: #1a1a24;
+    background: rgba(26, 26, 36, 0.95);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -205,6 +220,94 @@ main {
     font-size: 12px;
     color: #ccc;
     padding: 0 6px;
+}
+
+/* ACTUALITÉS */
+.actualites {
+    margin-top: 60px;
+}
+
+.actualites h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff4b3a;
+    padding-left: 12px;
+}
+
+.actus_content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.actus_card {
+    width: 180px;
+    background: #1a1a24;
+    border-radius: 12px;
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+}
+
+.actus_card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-bottom: 1px solid #fff;
+}
+
+.actus_card h3 {
+    margin: 8px 10px 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.actus_card p {
+    margin: 0 10px 12px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* DÉCOUVERTE */
+.decouverte {
+    margin-top: 50px;
+}
+
+.decouverte h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    border-left: 4px solid #ff4b3a;
+    padding-left: 12px;
+}
+
+.decouverte_content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.decouverte_card {
+    flex: 1 1 260px;
+    max-width: 320px;
+    background: #1a1a24;
+    border-radius: 12px;
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+}
+
+.decouverte_card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #fff;
+}
+
+.decouverte_card p {
+    padding: 10px 12px 14px;
+    font-size: 13px;
+    color: #ccc;
 }
 
 /* FOOTER */
@@ -269,21 +372,6 @@ footer {
     border-bottom-color: #ff4b3a;
 }
 
-/* IMAGE BACKGROUND À DROITE DANS LE MAIN */
-main::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-image: url("image-acceuil/background_acceuil.jpg");
-    background-size: cover;
-    background-position: center right;
-    pointer-events: none;
-    z-index: -1;
-}
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .header_acceuil {
@@ -345,7 +433,8 @@ main::after {
         align-items: flex-start;
     }
 
-    main::after {
+    /* on retire l'image de fond sur mobile/tablette */
+    .hero::after {
         display: none;
     }
 }
@@ -373,6 +462,11 @@ main::after {
     .secondflex > div {
         flex: none;
         width: 100%;
+    }
+
+    .actus_content,
+    .decouverte_content {
+        justify-content: center;
     }
 
     .footer_content {
