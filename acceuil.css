@@ -238,7 +238,6 @@ main::after {
     background-image: url("image-acceuil/background_acceuil.jpg"); /* change le nom */
     background-size: cover;  
     background-position: center right;
-              
     pointer-events: none;    /* empêche qu’on clique sur le faux calque */
     z-index: -1;             /* passe derrière le contenu */
 }
