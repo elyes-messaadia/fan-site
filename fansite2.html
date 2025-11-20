@@ -9,38 +9,186 @@
 <body>
     <!-- Header avec navigation -->
     <header class="header">
-        <div class="header-container">
-            <div class="logo">
+        <div class="logo">
+            <img src="Assets/img/logo-kaiju.png" alt="Logo Berserk">
+            <div>
                 <h1>BERSERK</h1>
                 <p class="tagline">La légende de l'Épéiste Noir</p>
             </div>
-            <nav class="nav">
-                <a href="../index.html" class="nav-link">Accueil Principal</a>
-                <a href="fansite2.html" class="nav-link active">Accueil</a>
-                <a href="actualite.html" class="nav-link">Actualités</a>
-                <a href="realisations.html" class="nav-link">Réalisations</a>
-                <a href="evenements.html" class="nav-link">Événements</a>
-                <a href="galerie.html" class="nav-link">Galerie</a>
-                <a href="liens.html" class="nav-link">Liens</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="fansite2.html" class="nav-link active">Accueil</a></li>
+                <li><a href="actualite.html" class="nav-link">Actualités</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="evenements.html" class="nav-link">Événements</a></li>
+                <li><a href="galerie.html" class="nav-link">Galerie</a></li>
+                <li><a href="liens.html" class="nav-link">Liens</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contacts">
+            <ul>
+                <li><a href="../index.html">Accueil Principal</a></li>
+            </ul>
         </div>
     </header>
 
-    <main class="main-content">
-        <!-- Section Hero avec titre -->
-        <section class="hero-section">
-            <h1 class="hero-title">L'Âge d'Or</h1>
+    <main>
+
+        <!-- SECTION HERO AVEC BACKGROUND -->
+        <section class="hero" id="section-hero">
+
+            <section class="text">
+                <h1>L'Âge d'Or</h1>
+                <p class="decouverte_subtitle_presentation">
+                    Plongez dans l'univers sombre et épique de Berserk, le chef-d'œuvre de Kentaro Miura qui a marqué l'histoire du manga dark fantasy.
+                </p>
+                <p class="description">
+                    Berserk est un manga seinen écrit et dessiné par Kentaro Miura, publié depuis 1989. 
+                    L'œuvre suit Guts, un mercenaire solitaire marqué par un destin tragique, dans sa quête 
+                    de vengeance contre les forces démoniaques.
+                </p>
+            </section>
+
+            <section class="content">
+
+                <!-- IMAGE PRINCIPALE -->
+                <div class="main_img">
+                    <h2>Guts</h2>
+                    <img src="Assets/img/V38-Guts-Manga.png" alt="Guts l'Épéiste Noir">
+                    <p>L'Épéiste Noir, un guerrier maudit portant la Marque du Sacrifice et brandissant l'épée Dragon Slayer.</p>
+                </div>
+
+                <div class="right_column">
+
+                    <!-- PREMIÈRE LIGNE D'IMAGES -->
+                    <div class="firstflex">
+                        <div class="img1">
+                            <img src="Assets/img/BTCG-Griffith_Holding_Sabre-OI.png" alt="Griffith" style="object-position: center 35%;">
+                            <h3>Griffith</h3>
+                            <p>Le Faucon Blanc, chef de la Brigade du Faucon.</p>
+                        </div>
+
+                        <div class="img2">
+                            <img src="Assets/img/BTCG-Casca_and_Puck-OI.jpeg" alt="Casca" style="object-position: center 30%;">
+                            <h3>Casca</h3>
+                            <p>Guerrière de la Brigade, compagne de Guts.</p>
+                        </div>
+
+                        <div class="img3">
+                            <img src="Assets/img/Puck_Manga.jpeg" alt="Puck" style="object-position: center 30%;">
+                            <h3>Puck</h3>
+                            <p>Petit elfe fidèle compagnon de Guts.</p>
+                        </div>
+                    </div>
+
+                    <!-- DEUXIÈME LIGNE D'IMAGES -->
+                    <div class="secondflex">
+                        <div class="img1">
+                            <img src="Assets/img/Schierke_Manga.jpeg" alt="Schierke" style="object-position: center 20%;">
+                            <h3>Schierke</h3>
+                            <p>Jeune sorcière aux pouvoirs magiques.</p>
+                        </div>
+
+                        <div class="img2">
+                            <img src="Assets/img/Serpico_wind.jpeg" alt="Serpico" style="object-position: center 25%;">
+                            <h3>Serpico</h3>
+                            <p>Escrimeur agile, protecteur de Farnese.</p>
+                        </div>
+
+                        <div class="img3">
+                            <img src="Assets/img/Farnese_de_Vandimion_Manga.jpeg" alt="Farnese" style="object-position: center 30%;">
+                            <h3>Farnese</h3>
+                            <p>Noble ancienne chef des Chevaliers du Fer.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
         </section>
 
-        <!-- Section description -->
-        <section class="description-section">
-            <div class="description-container">
-                <p class="intro-text">
-                    Plongez dans l'univers sombre et épique de Berserk, le chef-d'œuvre de Kentaro Miura. 
-                    Suivez l'histoire de Guts, l'Épéiste Noir, dans sa quête de vengeance contre les forces 
-                    démoniaques qui ont détruit sa vie. Un manga légendaire qui explore les thèmes de la 
-                    destinée, de l'humanité et du sacrifice.
-                </p>
+        <!-- ACTUALITÉS -->
+        <section class="actualites" id="section-actualites">
+            <h2>Actualités >></h2>
+            <p class="decouverte_subtitle">Studio Gaga continue l'héritage de Kentaro Miura avec de nouveaux chapitres qui honorent sa vision originale.</p>
+
+            <div class="actus_wrapper">
+                <div class="actus_image">
+                    <img src="Assets/img/berserk-1068x580.png" alt="Illustration Berserk">
+                </div>
+
+                <div class="actus_cards">
+
+                    <div class="actus_card">
+                        <img src="Assets/img/V38-Guts-Manga.png" alt="Studio Gaga">
+                        <h3>Continuation</h3>
+                        <p>Studio Gaga poursuit Berserk selon les notes de Miura.</p>
+                    </div>
+
+                    <div class="actus_card">
+                        <img src="Assets/img/berserk-tome-43-precommande-japanresell-7569720.jpeg" alt="Tome 42">
+                        <h3>Tome 42</h3>
+                        <p>Publication du tome 42 avec de nouvelles révélations.</p>
+                    </div>
+
+                    <div class="actus_card">
+                        <img src="Assets/img/images.jpg" alt="Exposition">
+                        <h3>Exposition</h3>
+                        <p>Grande exposition Berserk à Tokyo en 2025.</p>
+                    </div>
+
+                </div>
             </div>
         </section>
+
+
+        <!-- DÉCOUVERTE -->
+        <section class="decouverte" id="section-decouverte">
+            <h3>Découverte >></h3>
+            <p class="decouverte_subtitle">Explorez l'univers de Berserk</p>
+            <div class="decouverte_content">
+                
+                <a href="galerie.html" class="decouverte_card">
+                    <img src="Assets/img/V38-Guts-Manga.png" alt="Galerie">
+                    <p>Découvrez notre galerie de personnages et planches iconiques.</p>
+                </a>
+
+                <a href="evenements.html" class="decouverte_card">
+                    <img src="Assets/img/BTCG-Griffith_Holding_Sabre-OI.png" alt="Événements">
+                    <p>Tous les événements et anniversaires autour de Berserk.</p>
+                </a>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer_content">
+
+            <div class="img_footer">
+                <img src="Assets/img/logo-kaiju.png" alt="Logo Berserk">
+            </div>
+
+            <p>Page dédiée à l'univers du manga Berserk - Hommage à Kentaro Miura (1966-2021)</p>
+
+            <div class="nav_link_footer">
+                <ul>
+                    <li><a href="fansite2.html">Accueil</a></li>
+                    <li><a href="actualite.html">Actualités</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="liens.html">Liens</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
