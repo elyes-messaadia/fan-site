@@ -1,0 +1,112 @@
+
+/* ----- COULEURS DE LA CHARTE ----- */
+:root {
+    --fond-noir: #050508;
+    --fond-cartes: #1a1a24;
+    --rouge: #ff4b3a;
+    --rouge-sombre: #8b1f26;
+    --texte: #f5f5f5;
+}
+
+/* ----- STYLE GLOBAL ----- */
+body {
+    background-color: var(--fond-noir);
+    color: var(--texte);
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* ----- TITRES ----- */
+h1, h2, h3 {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+}
+
+/* ----- HEADER ----- */
+.header {
+    background-color: var(--fond-cartes);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    color: var(--texte);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.menu a:hover {
+    color: var(--rouge);
+}
+
+/* ----- CARTES PERSONNAGES ----- */
+.personnage {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.personnage > div {
+    background-color: var(--fond-cartes);
+    padding: 15px;
+    border-radius: 14px;
+    width: 200px;
+}
+
+.personnage .image {
+    background-color: #111;
+    width: 100%;
+    height: 150px;
+    border-radius: 14px;
+}
+
+/* ----- FORMULAIRE ----- */
+.formulaire {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.formulaire input,
+.formulaire textarea {
+    width: 250px;
+    padding: 10px;
+    background-color: var(--fond-cartes);
+    border: none;
+    border-radius: 10px;
+    color: var(--texte);
+    margin-bottom: 10px;
+}
+
+.formulaire button {
+    background-color: var(--rouge-sombre);
+    color: var(--texte);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.formulaire button:hover {
+    background-color: var(--rouge);
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    background-color: var(--fond-cartes);
+    padding: 20px;
+    color: var(--texte);
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-menu a {
+    color: var(--texte);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-menu a:hover {
+    color: var(--rouge);
+}
