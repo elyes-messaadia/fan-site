@@ -151,7 +151,7 @@ main {
     border-radius: 18px;
     overflow: hidden;
     border-bottom: #fff 1px solid;
-    z-index: 1; 
+    
 }
 
 .main_img img {
@@ -251,7 +251,7 @@ main {
     overflow: hidden;
     background: #1a1a24;
     box-shadow: 0 10px 25px rgba(214, 15, 15, 0.55);
-    z-index: 1;
+    
 
 }
 
