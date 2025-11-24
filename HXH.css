@@ -1,112 +1,291 @@
-
-/* ----- COULEURS DE LA CHARTE ----- */
-:root {
-    --fond-noir: #050508;
-    --fond-cartes: #1a1a24;
-    --rouge: #ff4b3a;
-    --rouge-sombre: #8b1f26;
-    --texte: #f5f5f5;
-}
-
-/* ----- STYLE GLOBAL ----- */
-body {
-    background-color: var(--fond-noir);
-    color: var(--texte);
-    font-family: system-ui, sans-serif;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
- 
-/* ----- TITRES ----- */
-h1, h2, h3 {
-    font-family: "Oswald", sans-serif;
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #050508;
+    color: #f5f5f5;
+}
+
+/* HEADER */
+.header_acceuil {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 48px;
+    background: #0b0b10;
+    border-bottom: 1px solid #2a2a35;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header_acceuil ul,
+.header_acceuil li {
+    list-style: none;
+}
+
+.header_acceuil a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 15px;
+}
+
+.logo img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav_link ul {
+    display: flex;
+    gap: 24px;
+}
+
+.nav_link a {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav_link a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: #ff4b3a;
+    transition: width 0.25s ease;
+}
+
+.nav_link a:hover::after {
+    width: 100%;
+}
+
+/* TITRE */
+h1 {
+    font-size: 36px;
+    margin: 60px auto 20px;
+    width: max-content;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 5px solid #ff4b3a;
+    padding-left: 12px;
+}
+
+p {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    color: #ccc;
     text-align: center;
 }
 
-/* ----- HEADER ----- */
-.header {
-    background-color: var(--fond-cartes);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu a {
-    color: var(--texte);
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.menu a:hover {
-    color: var(--rouge);
-}
-
-/* ----- CARTES PERSONNAGES ----- */
+/* --- CARDS PERSONNAGES --- */
 .personnage {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 30px;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 20px 0;
 }
 
 .personnage > div {
-    background-color: var(--fond-cartes);
-    padding: 15px;
+    width: 250px;
+    background: #1a1a24;
     border-radius: 14px;
-    width: 200px;
-}
-
-.personnage .image {
-    background-color: #111;
-    width: 100%;
-    height: 150px;
-    border-radius: 14px;
-}
-
-/* ----- FORMULAIRE ----- */
-.formulaire {
+    overflow: hidden;
     text-align: center;
-    margin-top: 30px;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 6px 18px rgba(255, 75, 58, 0.25);
+    transition: transform 0.25s ease;
+    padding-bottom: 12px;
+}
+
+.personnage > div:hover {
+    transform: translateY(-6px);
+    border-bottom-color: #ff4b3a;
+}
+
+/* Images (fond en attendant les vraies images) */
+.personnage .image {
+    height: 180px;
+    background: #0b0b10;
+    border-bottom: 1px solid #fff;
+}
+
+.personnage h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 12px 0 6px;
+}
+
+.personnage p {
+    padding: 0 12px 10px;
+    text-align: left;
+}
+
+/* CONTACT */
+h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 50px auto 20px;
+    width: max-content;
+    border-left: 4px solid #ff4b3a;
+    padding-left: 10px;
+}
+
+.formulaire {
+    width: 350px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .formulaire input,
 .formulaire textarea {
-    width: 250px;
-    padding: 10px;
-    background-color: var(--fond-cartes);
-    border: none;
-    border-radius: 10px;
-    color: var(--texte);
-    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #1a1a24;
+    border: 1px solid #2a2a35;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.formulaire textarea {
+    height: 120px;
+    resize: none;
 }
 
 .formulaire button {
-    background-color: var(--rouge-sombre);
-    color: var(--texte);
+    padding: 12px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    background: #ff4b3a;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
 }
 
 .formulaire button:hover {
-    background-color: var(--rouge);
+    opacity: 0.8;
 }
 
-/* ----- FOOTER ----- */
+/* FOOTER */
 .footer {
-    background-color: var(--fond-cartes);
-    padding: 20px;
-    color: var(--texte);
+    margin-top: 60px;
+    padding: 28px 0;
+    background: #0b0b10;
+    border-top: 1px solid #2a2a35;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
     text-align: center;
-    margin-top: 40px;
+}
+
+.footer-img {
+    width: 70px;
+    height: 70px;
+    background: #1a1a24;
+    border-radius: 12px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .footer-menu a {
-    color: var(--texte);
+    color: #f5f5f5;
     text-decoration: none;
-    margin: 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: 0.3s;
 }
 
 .footer-menu a:hover {
-    color: var(--rouge);
+    border-bottom-color: #ff4b3a;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .header_acceuil {
+        flex-direction: column;
+        padding: 12px 20px;
+        gap: 10px;
+    }
+
+    .nav_link ul {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    p {
+        padding: 0 16px;
+    }
+
+    .personnage {
+        padding: 20px 10px;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .personnage > div {
+        width: 90%;
+    }
+
+    .formulaire {
+        width: 90%;
+    }
+}
+
+/* IMAGES PERSONNAGES */
+.GON .image {
+    background-image: url("image_hxh/gon_pin.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.KILLUA .image {
+    background-image: url("image_hxh/kilua_pin.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.KURAPIKA .image {
+    background-image: url("image_hxh/kurapika_pin.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.LEORIO .image {
+    background-image: url("image_hxh/leolio_pin.jpg");
+    background-size: cover;
+    background-position: center;
 }
