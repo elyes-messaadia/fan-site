@@ -11,7 +11,7 @@ body {
     color: #f5f5f5;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header_acceuil {
     width: 100%;
     display: flex;
@@ -34,6 +34,12 @@ body {
     text-decoration: none;
     color: #f5f5f5;
     font-size: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo img {
@@ -59,16 +65,29 @@ body {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 4px;
+    height: 5px;
     background: #ff4b3a;
-    transition: width 0.25s ease;
+    transition: width 0.25s;
 }
 
 .nav_link a:hover::after {
     width: 100%;
 }
 
-/* TITRE */
+.contacts a {
+    border: 1px solid #f5f5f5;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.contacts a:hover {
+    background: #ff4b3a;
+    border-color: #ff4b3a;
+}
+
+/* ================= TITRE ================= */
 h1 {
     font-size: 36px;
     margin: 60px auto 20px;
@@ -87,7 +106,7 @@ p {
     text-align: center;
 }
 
-/* --- CARDS PERSONNAGES --- */
+/* ================= CARDS PERSONNAGES ================= */
 .personnage {
     display: flex;
     justify-content: center;
@@ -113,7 +132,6 @@ p {
     border-bottom-color: #ff4b3a;
 }
 
-/* Images (fond en attendant les vraies images) */
 .personnage .image {
     height: 180px;
     background: #0b0b10;
@@ -131,7 +149,7 @@ p {
     text-align: left;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 h2 {
     font-size: 28px;
     text-transform: uppercase;
@@ -180,92 +198,69 @@ h2 {
     opacity: 0.8;
 }
 
-/* FOOTER */
-.footer {
-    margin-top: 60px;
-    padding: 28px 0;
+/* ================= FOOTER ================= */
+footer {
     background: #0b0b10;
+    padding: 24px 0;
     border-top: 1px solid #2a2a35;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    text-align: center;
 }
 
-.footer-img {
-    width: 70px;
-    height: 70px;
-    background: #1a1a24;
+.footer_content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.img_footer {
+    width: 64px;
+    height: 64px;
     border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-.footer-menu {
+.img_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer_content p {
+    flex: 1;
+    font-size: 13px;
+    color: #bdbdcb;
+    border-bottom: #fff 1px solid;
+    padding-bottom: 6px;
+}
+
+.nav_link_footer ul,
+.nav_link_footer li {
+    list-style: none;
+}
+
+.nav_link_footer ul {
     display: flex;
-    gap: 20px;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.footer-menu a {
-    color: #f5f5f5;
+.nav_link_footer a {
     text-decoration: none;
-    font-size: 14px;
-    border-bottom: 1px solid transparent;
+    color: #f5f5f5;
+    font-size: 13px;
     padding-bottom: 3px;
-    transition: 0.3s;
+    border-bottom: 1px solid transparent;
 }
 
-.footer-menu a:hover {
+.nav_link_footer a:hover {
     border-bottom-color: #ff4b3a;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .header_acceuil {
-        flex-direction: column;
-        padding: 12px 20px;
-        gap: 10px;
-    }
-
-    .nav_link ul {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    h1 {
-        text-align: center;
-        width: 100%;
-    }
-
-    p {
-        padding: 0 16px;
-    }
-
-    .personnage {
-        padding: 20px 10px;
-    }
-
-    .footer-menu {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 550px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .personnage > div {
-        width: 90%;
-    }
-
-    .formulaire {
-        width: 90%;
-    }
-}
-
-/* IMAGES PERSONNAGES */
+/* ================= IMAGES PERSONNAGES ================= */
 .GON .image {
     background-image: url("image_hxh/gon_pin.jpg");
     background-size: cover;
@@ -288,4 +283,71 @@ h2 {
     background-image: url("image_hxh/leolio_pin.jpg");
     background-size: cover;
     background-position: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .header_acceuil {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav_link ul {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .contacts {
+        align-self: stretch;
+    }
+
+    .contacts a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    p {
+        padding: 0 16px;
+    }
+
+    .personnage {
+        padding: 20px 10px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer_content p {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .nav_link_footer ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .personnage > div {
+        width: 90%;
+    }
+
+    .formulaire {
+        width: 90%;
+    }
 }
